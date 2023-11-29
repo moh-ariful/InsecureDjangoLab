@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Post{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h2>Add Post</h2>
+    <br />
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.judul.label_tag }} {{ form.judul }}<br><br>
+        {{ form.date.label_tag }} {{ form.date }}<br><br>
+        {{ form.image.label_tag }} {{ form.image }}<br><br>
+        {{ form.konten.label_tag }} {{ form.konten }}<br><br>
+        <input type="hidden" name="penulis" value="{{ user.id }}">
+        <br>
+        <button type="submit" class="btn btn-primary">Add Post</button>
+    </form>
+</div>
+
+{% endblock content %}

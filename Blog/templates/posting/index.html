@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container mt-3 mb-5 justify-content-center" style="width: 69rem;">
+    {% for posting in postings %}
+    <img src="{{ posting.image.url }}"  style="width:350px" class="card-img-top" alt="my image">
+    <div class="card-body">
+        <small>{{ posting.date }}</small>
+      <h5 class="card-title">{{ posting.judul }}</h5>
+      <p class='badge bg-secondary'>Penulis: {{ posting.penulis }} </p>
+      <p class="card-text">{{ posting.konten|truncatechars:199 }}</p>
+      <a href="{% url 'detail' posting.id %}" class="btn btn-primary">More</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container mt-5 mb-5">
+
+    <div class="pagination mt-5">
+      <span class="step-links">
+          {% if postings.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ postings.previous_page_number }}">previous</a>
+          {% endif %}
+
+          <span class="current">
+              Page {{ postings.number }} of {{ postings.paginator.num_pages }}.
+          </span>
+
+          {% if postings.has_next %}
+              <a href="?page={{ postings.next_page_number }}">next</a>
+              <a href="?page={{ postings.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+  </div>
+
+  </div>
+
+
+{% endblock %}
+

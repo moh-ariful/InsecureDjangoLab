@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Halaman Detail {% endblock title %}
+
+{% block content %}
+<div class="container mt-3 mb-5 justify-content-center" style="width: 69rem;">
+
+    <img src="{{ posting.image.url }}"  style="width:350px" class="card-img-top" alt="my image">
+    <div class="card-body">
+        <small>{{ posting.date }}</small>
+        <h5 class="card-title">{{ posting.judul }}</h5>
+        <p class='badge bg-secondary'>Penulis: {{ posting.penulis }} </p>
+        <p class="card-text">{{ posting.konten|safe }}</p>
+
+        <a href="{% url 'index' %}" class="btn btn-success">Home</a>
+        {% if user.is_authenticated and user.is_staff %}
+        <!-- Pastikan bhw `posting.id` ada & bukan None -->
+        {% if posting.id %}
+            <a href="{% url 'update' posting.id %}" class="btn btn-warning">Update Posting</a>
+            <a href="{% url 'delete' posting.id %}" class="btn btn-danger">Hapus Posting</a>
+        {% endif %}
+    {% endif %}
+
+    </div>
+
+</div>
+{% endblock %}
+

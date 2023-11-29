@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+
+<div class="container mt-5">
+    {% if user.is_authenticated %}
+    <h2>Anda yakin untuk menghapus posting ini?</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-danger">Hapus</button>
+        <br>
+    </form>
+    {% endif %}
+    <h3>Atau edit posting ini</h3>
+    <h2>Edit posting ini</h2>
+    <h2>Edit <a href="{% url 'update' posting.pk %}">{{ posting.judul }}</a></h2>
+</div>
+
+{% endblock content %}
+    
