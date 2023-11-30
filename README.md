@@ -18,10 +18,10 @@
 <body>
     <h1>Insecure DjangoLab</h1>
     <h2>Instalasi</h2>
-    <p>Untuk memulai menggunakan Insecure DjangoLab, ikuti langkah-langkah di bawah ini:</p>
+    <p>Untuk memulai menggunakan Insecure DjangoLab, ikuti langkah2 di bawah ini:</p>
     <ol>
-        <li>Pastikan Anda telah menginstal Python pada sistem Anda. Aplikasi ini disarankan untuk menggunakan Python versi 3.8 atau yang lebih baru.</li>
-        <li>Buat lingkungan virtual Python untuk mengisolasi paket-paket yang diperlukan. Buka terminal atau command prompt dan jalankan perintah berikut:
+        <li>Pastikan kalian telah menginstal Python pada sistem kalian. Aplikasi ini disarankan utk menggunakan Python versi 3.8 atau yg lebih baru.</li>
+        <li>Buat lingkungan virtual Python utk mengisolasi paket2 yg diperlukan. Buka terminal atau command prompt & jalankan perintah berikut:
             <pre><code>python -m venv nama_lingkungan_virtual</code></pre>
         </li>
         <li>Aktifkan lingkungan virtual yang telah dibuat dengan perintah berikut:
@@ -41,13 +41,13 @@
             <pre><code>python manage.py makemigrations</code></pre>
             <pre><code>python manage.py migrate</code></pre>
         </li>
-        <li>Anda kini dapat menjalankan server pengembangan Django dan mengakses aplikasi dengan:
+        <li>Kita kini bisa menjalankan server pengembangan Django & mengakses aplikasi dengan:
             <pre><code>python manage.py runserver</code></pre>
         </li>
     </ol>
 
     <h2>Peringatan Keamanan</h2>
-    <p>Aplikasi ini sengaja dibuat dengan kerentanan keamanan untuk keperluan pembelajaran. Jangan gunakan aplikasi ini dalam produksi atau di lingkungan yang dapat diakses publik. Selalu praktikkan pengembangan perangkat lunak dengan keamanan yang baik dan bertanggung jawab.</p>
+    <p>Aplikasi ini sengaja dibuat dgn kerentanan keamanan utk keperluan pembelajaran. Jangan gunakan aplikasi ini dalam produksi atau di lingkungan yg dapat diakses publik. Selalu praktikkan pengembangan perangkat lunak dengan keamanan yg baik & bertanggung jawab.</p>
 </body>
 </html>
 
