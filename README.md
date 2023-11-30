@@ -24,7 +24,7 @@
         <li>Buat lingkungan virtual Python utk mengisolasi paket2 yg diperlukan. Buka terminal atau command prompt & jalankan perintah berikut:
             <pre><code>python -m venv nama_lingkungan_virtual</code></pre>
         </li>
-        <li>Aktifkan lingkungan virtual yang telah dibuat dengan perintah berikut:
+        <li>Aktifkan lingkungan virtual yg udah dibuat dgn perintah berikut:
             <ul>
                 <li>Pada Windows:
                     <pre><code>nama_lingkungan_virtual\Scripts\activate</code></pre>
@@ -34,7 +34,7 @@
                 </li>
             </ul>
         </li>
-        <li>Dengan lingkungan virtual aktif, instal Django dan library pendukung lainnya menggunakan file `requirements.txt` yang telah disediakan. Jalankan perintah:
+        <li>Dengan lingkungan virtual aktif, instal Django & library pendukung lainnya menggunakan file `requirements.txt` yg telah disediakan. Jalankan perintah:
             <pre><code>pip install -r requirements.txt</code></pre>
         </li>
         <li>Setelah semua library terinstal, buat migrasi database dengan perintah:
